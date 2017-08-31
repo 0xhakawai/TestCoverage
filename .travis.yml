@@ -6,7 +6,7 @@ install:
   - npm install --save-dev blanket glob
   - npm install coveralls --save-dev
   - npm install mocha-lcov-reporter --save-dev
-  - mocha --require blanket -R html-cov > coverage.html
+  #- mocha --require blanket -R html-cov > coverage.html
   #- npm install --save-dev mocha
 script:
   #- ./node_modules/mocha/bin/mocha
