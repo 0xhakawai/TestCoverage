@@ -5,7 +5,7 @@ install:
   #- npm install --save-dev jest
   - npm install --save-dev blanket glob
   - npm install coveralls --save-dev
-  - npm install --save-dev mocha-lcov-reporter coveralls
+  - npm install mocha-lcov-reporter --save-dev
   - mocha --require blanket -R html-cov > coverage.html
   #- npm install --save-dev mocha
 script:
