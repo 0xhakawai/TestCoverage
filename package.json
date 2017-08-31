@@ -20,6 +20,7 @@
     "css-loader": "^0.17.0",
     "html-webpack-plugin": "^1.6.1",
     "jest-cli": "^0.5.2",
+    "nyc": "^11.1.0",
     "react-tools": "^0.13.3",
     "style-loader": "^0.12.3",
     "webpack": "^1.12.1"
@@ -32,12 +33,17 @@
       "core-js/.*"
     ],
     "moduleFileExtensions": [
-      "js", "json", "jsx"
+      "js",
+      "json",
+      "jsx"
     ],
     "testFileExtensions": [
-      "js", "jsx"
+      "js",
+      "jsx"
     ],
     "testDirectoryName": "tests",
-    "testPathDirs": ["js"]
+    "testPathDirs": [
+      "js"
+    ]
   }
 }
