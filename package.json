@@ -1,0 +1,85 @@
+{
+  "name": "react-ux-password-field",
+  "version": "0.9.12",
+  "license": "MIT",
+  "main": "src/index.js",
+  "browser": "./lib/react-ux-password-field.js",
+  "description": "A UX forward password field for react-js",
+  "scripts": {
+    "dev": "webpack --watch --port 9501 --colors",
+    "demo": "webpack-dev-server --config webpack.server.config.js --content-base ./dev_server --port 9500 --colors --hot",
+    "test": "jest",
+    "build": "webpack && webpack -p --config webpack.min.config.js && webpack -p -d --config webpack.demo.config.js",
+    "deploy": "gh-pages-deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seethroughtrees/react-ux-password-field.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seethroughtrees/react-ux-password-field/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "form",
+    "validation",
+    "html5",
+    "password",
+    "password-strength",
+    "zxcvbn",
+    "validate",
+    "password-security"
+  ],
+  "author": "seethroughtrees",
+  "homepage": "https://seethroughtrees.github.io/react-ux-password-field/",
+  "engines": {
+    "iojs": ">=2.x.x",
+    "nodejs": ">=0.11.x"
+  },
+  "dependencies": {
+    "lodash.debounce": "^3.1.1",
+    "react": ">=0.13.0"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.23.1",
+    "csswring": "^4.2.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "gh-pages-deploy": "^0.4.2",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^3.6.0",
+    "normalize.css": "^4.1.1",
+    "postcss-loader": "^0.8.2",
+    "root-require": "^0.3.1",
+    "sass-loader": "^3.2.0",
+    "script-loader": "^0.7.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "demo",
+    "prep": [
+      "build"
+    ],
+    "noprompt": false
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ]
+  }
+}
