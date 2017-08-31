@@ -5,8 +5,8 @@ install:
   #- npm install --save-dev jest
   #- npm install --save-dev blanket glob
   #- npm install coveralls --save-dev
-  #- npm install --save-dev mocha-lcov-reporter coveralls
-  - npm install --save-dev mocha
+  - npm install --save-dev mocha-lcov-reporter coveralls
+  #- npm install --save-dev mocha
 script:
   #- ./node_modules/mocha/bin/mocha
   - npm test
