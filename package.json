@@ -75,5 +75,8 @@
       ],
       "loader": "../../../test/blanket-stub-jsx.js"
     }
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
