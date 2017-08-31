@@ -8,6 +8,7 @@ install:
   #- npm install --save-dev mocha-lcov-reporter coveralls
   - npm install --save-dev mocha
 script:
-  - ./node_modules/mocha/bin/mocha
+  #- ./node_modules/mocha/bin/mocha
+  - npm test
 after_success:
   - coveralls

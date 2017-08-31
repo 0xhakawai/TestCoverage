@@ -82,15 +82,7 @@
       "es6"
     ]
   },
-  "config": {
-    "blanket": {
-      "pattern": "src",
-      "data-cover-never": [
-        "dist",
-        "node_modules",
-        "tests"
-      ],
-      "loader": "../../../tests/component-test.js"
-    }
+  "scripts": {
+    "test": "mocha"
   }
 }
