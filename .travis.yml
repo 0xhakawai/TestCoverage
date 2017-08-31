@@ -11,7 +11,7 @@ install:
   #- npm install -g mocha --save-dev
   #- npm install -g mocha --save-dev
   - npm install istanbul --save-dev
-  - npm install --save-dev coveralls mocha-lcov-reporter
+  #- npm install --save-dev coveralls mocha-lcov-reporter
 script:
   - npm test
 after_success:

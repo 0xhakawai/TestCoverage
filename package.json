@@ -1,71 +1,43 @@
 {
-  "name": "react-ux-password-field",
-  "version": "0.9.12",
-  "license": "MIT",
-  "main": "src/index.js",
-  "browser": "./lib/react-ux-password-field.js",
-  "description": "A UX forward password field for react-js",
+  "name": "jest-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
-    "cover": "istanbul cover _jest",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/seethroughtrees/react-ux-password-field.git"
-  },
-  "bugs": {
-    "url": "https://github.com/seethroughtrees/react-ux-password-field/issues"
-  },
-  "keywords": [
-    "react",
-    "react-component",
-    "form",
-    "validation",
-    "html5",
-    "password",
-    "password-strength",
-    "zxcvbn",
-    "validate",
-    "password-security"
-  ],
-  "author": "seethroughtrees",
-  "homepage": "https://seethroughtrees.github.io/react-ux-password-field/",
-  "engines": {
-    "iojs": ">=2.x.x",
-    "nodejs": ">=0.11.x"
-  },
+  "author": "Joe Turner <jturner@thinkful.com>",
+  "license": "UNLICENSED",
   "dependencies": {
-    "lodash.debounce": "^3.1.1",
-    "react": ">=0.13.0"
+    "material-ui": "^0.11.0",
+    "react": "^0.13.3",
+    "react-tap-event-plugin": "^0.1.7"
   },
   "devDependencies": {
-    "coveralls": "^2.13.1",
-    "glob": "^4.3.5",
-    "istanbul": "^0.4.5",
-    "jest": "^20.0.4",
-    "jsdom": "^3.1.1",
-    "mocha": "^2.3.3",
-    "mocha-jsdom": "^0.2.1",
-    "mocha-lcov-reporter": "0.0.1"
-  },
-  "gh-pages-deploy": {
-    "staticpath": "demo",
-    "prep": [
-      "build"
-    ],
-    "noprompt": false
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.17.0",
+    "html-webpack-plugin": "^1.6.1",
+    "jest-cli": "^0.5.2",
+    "react-tools": "^0.13.3",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.12.1"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "testFileExtensions": [
-      "es6",
-      "js"
+    "scriptPreprocessor": "<rootDir>/preprocessor.js",
+    "setupEnvScriptFile": "<rootDir>/jestEnvironment.js",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "core-js/.*"
     ],
     "moduleFileExtensions": [
-      "js",
-      "json",
-      "es6"
-    ]
+      "js", "json", "jsx"
+    ],
+    "testFileExtensions": [
+      "js", "jsx"
+    ],
+    "testDirectoryName": "tests",
+    "testPathDirs": ["js"]
   }
 }
