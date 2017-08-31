@@ -10,7 +10,7 @@ install:
   #- npm install --save-dev mocha
   #- npm install -g mocha --save-dev
   #- npm install -g mocha --save-dev
-  - npm install istanbul --save-dev
+  #- npm install istanbul --save-dev
   #- npm install --save-dev coveralls mocha-lcov-reporter
   #- npm install --save-dev jest-babel-istanbul
   - npm install nyc --save-dev
