@@ -40,7 +40,6 @@
     "react": ">=0.13.0"
   },
   "devDependencies": {
-    "blanket": "^1.1.6",
     "coveralls": "^2.13.1",
     "glob": "^4.3.5",
     "istanbul": "^0.4.5",
@@ -67,16 +66,5 @@
       "json",
       "es6"
     ]
-  },
-  "config": {
-    "blanket": {
-      "pattern": "src",
-      "data-cover-never": [
-        "dist",
-        "node_modules",
-        "test"
-      ],
-      "loader": "../../../test/blanket-stub-jsx.js"
-    }
   }
 }
