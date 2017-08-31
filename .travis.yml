@@ -9,4 +9,8 @@ install:
   #- npm install --save-dev mocha
 script:
   #- ./node_modules/mocha/bin/mocha
-  - nyc npm test && nyc report --reporter=text-lcov | coveralls
+  ./node_modules/.bin/mocha \
+  --require blanket \
+  --reporter mocha-lcov-reporter \
+  test/*test.js \
+  | ./node_modules/coveralls/bin/coveralls.js
