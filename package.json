@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "Joe Turner <jturner@thinkful.com>",
   "license": "UNLICENSED",
