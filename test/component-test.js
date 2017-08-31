@@ -1,7 +1,7 @@
 // waiting for jest to work with node 0.12
 // https://github.com/facebook/jest/issues/243
 
-//jest.dontMock('../lib/react-ux-password-field');
+jest.dontMock('../lib/react-ux-password-field');
 /*
 var React = require('react/addons');
 var Util = React.addons.TestUtils;
@@ -22,3 +22,7 @@ describe("component", function() {
   });
 });
 */
+
+x = 42;
+if(false)
+     x =-1;

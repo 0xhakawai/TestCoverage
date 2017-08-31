@@ -2,14 +2,14 @@ language: node_js
 node_js:
   - "stable"
 install:
-  #- npm install --save-dev jest
+  - npm install --save-dev jest
   #- npm install --save-dev blanket glob
   #- npm install coveralls --save-dev
   #- npm install -g mocha-lcov-reporter --save-dev
   #- mocha --require blanket -R html-cov > coverage.html
   #- npm install --save-dev mocha
   #- npm install -g mocha --save-dev
-  - npm install -g mocha --save-dev
+  #- npm install -g mocha --save-dev
   - npm install istanbul --save-dev
   - npm install --save-dev coveralls mocha-lcov-reporter
 script:
