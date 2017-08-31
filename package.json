@@ -90,7 +90,7 @@
         "node_modules",
         "test"
       ],
-      "loader": "../../../test/componet-test.js"
+      "loader": "../../../test/blanket-stub-jsx.js"
     }
   }
 }

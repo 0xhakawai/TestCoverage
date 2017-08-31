@@ -10,6 +10,7 @@ install:
 script:
   #- ./node_modules/mocha/bin/mocha
   #- npm test
+  NODE_ENV=test
   ./node_modules/.bin/mocha \
   --require blanket \
   --reporter mocha-lcov-reporter \
