@@ -2,10 +2,12 @@ language: node_js
 node_js:
   - "0.10"
 install:
-  - npm install --save-dev jest
-  - npm install coveralls --save-dev
-  - npm install --save-dev mocha-lcov-reporter coveralls
+  #- npm install --save-dev jest
+  #- npm install --save-dev blanket glob
+  #- npm install coveralls --save-dev
+  #- npm install --save-dev mocha-lcov-reporter coveralls
+  - npm install --save-dev mocha
 script:
-  - npm run test
+  - ./node_modules/mocha/bin/mocha
 after_success:
   - coveralls
