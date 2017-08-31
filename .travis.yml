@@ -4,7 +4,7 @@ node_js:
 install:
   - npm install
   #- npm install --save-dev blanket glob
-  #- npm install coveralls --save-dev
+  - npm install coveralls --save-dev
   #- npm install -g mocha-lcov-reporter --save-dev
   #- mocha --require blanket -R html-cov > coverage.html
   #- npm install --save-dev mocha
