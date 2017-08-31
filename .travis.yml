@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "stable"
 install:
-  - npm install --save-dev jest
+  - npm install
   #- npm install --save-dev blanket glob
   #- npm install coveralls --save-dev
   #- npm install -g mocha-lcov-reporter --save-dev
@@ -12,7 +12,8 @@ install:
   #- npm install -g mocha --save-dev
   - npm install istanbul --save-dev
   #- npm install --save-dev coveralls mocha-lcov-reporter
+  #- npm install --save-dev jest-babel-istanbul
 script:
-  - npm test
+  - jest --cover
 after_success:
 - npm run coveralls
