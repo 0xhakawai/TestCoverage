@@ -45,9 +45,9 @@
     "testPathDirs": [
       "js"
     ],
-    collectCoverageFrom: [
-    "**/node_modules/**",
-    "**/js/**"
+    "collectCoverageFrom": [
+    "<rootDir>/node_modules/**",
+    "<rootDir>/js/*.js"
     ]
   }
 }
