@@ -14,6 +14,6 @@ install:
   #- npm install --save-dev coveralls mocha-lcov-reporter
   #- npm install --save-dev jest-babel-istanbul
 script:
-  - jest --cover
+  - npm test
 after_success:
 - npm run coveralls

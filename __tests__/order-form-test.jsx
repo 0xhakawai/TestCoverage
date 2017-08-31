@@ -73,4 +73,124 @@ describe('OrderForm', function() {
             }]
         };
     });
+
+    it('follows the order prop for values', function() {
+        var orderForm = TestUtils.renderIntoDocument(
+            <App><OrderForm order={testOrder} /></App>
+        );
+
+        var inputs = getInputNodes(orderForm);
+        expect(inputs.bacon.bacon.checked).toBeTruthy();
+        expect(inputs.bacon.veganBacon.checked).toBeFalsy();
+        expect(inputs.salad.lettuce.checked).toBeTruthy();
+        expect(inputs.salad.tomato.checked).toBeTruthy();
+        expect(inputs.condiments.mayo.checked).toBeTruthy();
+        expect(inputs.condiments.mustard.checked).toBeTruthy();
+    });
+
+    it('calls onBaconChange when bacon is selected', function() {
+        var spy = jasmine.createSpy('spy');
+        var orderForm = TestUtils.renderIntoDocument(
+            <App><OrderForm order={testOrder} onBaconChange={spy} /></App>
+        );
+
+        var inputs = getInputNodes(orderForm);
+        TestUtils.Simulate.change(inputs.bacon.bacon, {
+            target: {
+                value: "0"
+            }
+        });
+
+        expect(spy).toHaveBeenCalled();
+        expect(spy).toHaveBeenCalledWith(0);
+    });
+
+    it('calls onBaconChange when vegan bacon is selected', function() {
+        var spy = jasmine.createSpy('spy');
+        var orderForm = TestUtils.renderIntoDocument(
+            <App><OrderForm order={testOrder} onBaconChange={spy} /></App>
+        );
+
+        var inputs = getInputNodes(orderForm);
+        TestUtils.Simulate.change(inputs.bacon.veganBacon, {
+            target: {
+                value: "1"
+            }
+        });
+
+        expect(spy).toHaveBeenCalled();
+        expect(spy).toHaveBeenCalledWith(1);
+    });
+
+    it('calls onSaladChange when lettuce is selected', function() {
+        var spy = jasmine.createSpy('spy');
+        var orderForm = TestUtils.renderIntoDocument(
+            <App><OrderForm order={testOrder} onSaladChange={spy} /></App>
+        );
+
+        var inputs = getInputNodes(orderForm);
+        inputs.salad.lettuce.checked = false;
+        TestUtils.Simulate.change(inputs.salad.lettuce, {
+            target: {
+                id: "0"
+            }
+        });
+
+        expect(spy).toHaveBeenCalled();
+        expect(spy).toHaveBeenCalledWith(0, false);
+    });
+
+    it('calls onSaladChange when tomato is selected', function() {
+        var spy = jasmine.createSpy('spy');
+        var orderForm = TestUtils.renderIntoDocument(
+            <App><OrderForm order={testOrder} onSaladChange={spy} /></App>
+        );
+
+        var inputs = getInputNodes(orderForm);
+        inputs.salad.tomato.checked = false;
+        TestUtils.Simulate.change(inputs.salad.tomato, {
+            target: {
+                id: "1"
+            }
+        });
+
+        expect(spy).toHaveBeenCalled();
+        expect(spy).toHaveBeenCalledWith(1, false);
+    });
+
+    it('calls onCondimentChange when mayo is selected', function() {
+        var spy = jasmine.createSpy('spy');
+        var orderForm = TestUtils.renderIntoDocument(
+            <App><OrderForm order={testOrder} onCondimentChange={spy} /></App>
+        );
+
+        var inputs = getInputNodes(orderForm);
+        inputs.condiments.mayo.checked = false;
+        TestUtils.Simulate.change(inputs.condiments.mayo, {
+            target: {
+                id: "0"
+            }
+        });
+
+        expect(spy).toHaveBeenCalled();
+        expect(spy).toHaveBeenCalledWith(0, false);
+    });
+
+    it('calls onCondimentChange when mustard is selected', function() {
+        var spy = jasmine.createSpy('spy');
+        var orderForm = TestUtils.renderIntoDocument(
+            <App><OrderForm order={testOrder} onCondimentChange={spy} /></App>
+        );
+
+        var inputs = getInputNodes(orderForm);
+        inputs.condiments.mustard.checked = false;
+        TestUtils.Simulate.change(inputs.condiments.mustard, {
+            target: {
+                id: "1"
+            }
+        });
+
+        expect(spy).toHaveBeenCalled();
+        expect(spy).toHaveBeenCalledWith(1, false);
+    });
 });
