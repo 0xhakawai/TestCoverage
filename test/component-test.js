@@ -2,7 +2,7 @@
 // https://github.com/facebook/jest/issues/243
 
 jest.dontMock('../lib/react-ux-password-field');
-/*
+
 var React = require('react/addons');
 var Util = React.addons.TestUtils;
 var InputPassword = require('../lib/react-ux-password-field');
@@ -21,8 +21,3 @@ describe("component", function() {
     expect(input.getDOMNode().textContent).toEqual('On');
   });
 });
-*/
-
-x = 42;
-if(false)
-     x =-1;
