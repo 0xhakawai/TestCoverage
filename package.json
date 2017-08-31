@@ -44,6 +44,10 @@
     "testDirectoryName": "tests",
     "testPathDirs": [
       "js"
+    ],
+    collectCoverageFrom: [
+    "**/node_modules/**",
+    "**/js/**"
     ]
   }
 }
