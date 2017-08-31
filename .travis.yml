@@ -3,6 +3,7 @@ node_js:
   - "0.10"
 install:
   #- npm install --save-dev jest
+  - npm install coveralls --save-dev
   - npm install --save-dev mocha-lcov-reporter coveralls
 script:
   ./node_modules/.bin/mocha \
