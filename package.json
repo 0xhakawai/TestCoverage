@@ -6,7 +6,9 @@
   "browser": "./lib/react-ux-password-field.js",
   "description": "A UX forward password field for react-js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
     "blanket": "^1.1.6",
     "coveralls": "^2.13.1",
     "glob": "^4.3.5",
+    "istanbul": "^0.4.5",
     "jsdom": "^3.1.1",
     "mocha": "^2.3.3",
     "mocha-jsdom": "^0.2.1",
@@ -75,8 +78,5 @@
       ],
       "loader": "../../../test/blanket-stub-jsx.js"
     }
-  },
-  "scripts": {
-    "test": "mocha"
   }
 }
