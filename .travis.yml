@@ -13,7 +13,8 @@ install:
   - npm install istanbul --save-dev
   #- npm install --save-dev coveralls mocha-lcov-reporter
   #- npm install --save-dev jest-babel-istanbul
+  - npm install nyc --save-dev
 script:
   - npm test
 after_success:
-- npm run coveralls
+- nyc report --temp-directory=coverage --reporter=text-lcov | coveralls
