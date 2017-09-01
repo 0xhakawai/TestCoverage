@@ -46,7 +46,8 @@
       "js"
     ],
     "collectCoverageFrom": [
-      "/js/**"
+      "**/node_modules/**",
+      "**/js/**"
     ]
   }
 }
