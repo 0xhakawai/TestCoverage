@@ -1,6 +1,6 @@
 'use strict';
 
 var React = require('react');
-var CheckboxWithLabel = require('components/testComponent');
-
-React.render(<CheckboxWithLabel labelOn="On" labelOff="Off" />, document.getElementById('view'));
+var ReactDOM = require('react-dom');
+var Accordion = require('components/accordionComponent');
+ReactDOM.render(<Accordion/>, document.getElementById('view'));
