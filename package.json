@@ -42,5 +42,27 @@
     "browser-sync": "^2.7.1",
     "gulp": "^3.9.1",
     "nyc": "^11.1.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "all": true,
+    "report-dir": "./alternative",
+    "extension": [
+      ".js",
+      ".jsx"
+    ],
+    "include": [
+      "*.js",
+      "scripts/*.js"
+    ],
+    "exclude": [
+      "./alternative"
+    ],
+    "check-coverage": {
+      "statements": -5,
+      "lines": -5,
+      "branches": -5,
+      "functions": -5
+    }
   }
 }
