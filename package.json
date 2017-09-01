@@ -46,7 +46,7 @@
       "js"
     ],
     "collectCoverageFrom": [
-    "<rootDir>/js/**"
+      "js/**"
     ]
   }
 }
