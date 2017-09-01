@@ -5,20 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc jest",
-    "postinstall": "jspm install",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "jest": {
     "scriptPreprocessor": "./preprocessor.js",
     "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/jspm_packages"
+      "/node_modules/"
     ],
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/fbjs",
       "<rootDir>/node_modules/react-dom",
       "<rootDir>/node_modules/react-addons-test-utils"
+    ],
+    "testFileExtensions": [
+      "js"
     ]
   },
   "author": "Shidhin CR <shidhincr@gmail.com> (http://www.undefinednull.com/)",
@@ -32,7 +33,6 @@
     "gulp-shell": "^0.4.1",
     "harmonize": "^1.4.1",
     "jest-cli": "^0.8",
-    "jspm": "^0.15.5",
     "react": "^0.14",
     "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
@@ -42,17 +42,5 @@
     "browser-sync": "^2.7.1",
     "gulp": "^3.9.1",
     "nyc": "^11.1.0"
-  },
-  "jspm": {
-    "directories": {},
-    "dependencies": {
-      "react": "npm:react@0.14.2",
-      "react-dom": "npm:react-dom@0.14.2"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
-      "core-js": "npm:core-js@^0.9.4"
-    }
   }
 }
