@@ -4,17 +4,9 @@ node_js:
 install:
   - npm install
   #- npm install --save-dev blanket glob
-  - npm install coveralls --save-dev
-  #- npm install -g mocha-lcov-reporter --save-dev
-  #- mocha --require blanket -R html-cov > coverage.html
-  #- npm install --save-dev mocha
-  #- npm install -g mocha --save-dev
-  #- npm install -g mocha --save-dev
-  #- npm install istanbul --save-dev
-  #- npm install --save-dev coveralls mocha-lcov-reporter
-  #- npm install --save-dev jest-babel-istanbul
+  #- npm install coveralls --save-dev
   - npm install nyc --save-dev
 script:
   - npm test
-after_success:
-  - npm run coverage
+#after_success:
+#  - npm run coverage
