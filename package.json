@@ -4,8 +4,7 @@
   "description": "Seed for React Jest Gulp Project",
   "main": "index.js",
   "scripts": {
-    "test": "nyc jest",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "nyc jest"
   },
   "jest": {
     "scriptPreprocessor": "./preprocessor.js",
